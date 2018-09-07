@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <body>
 <h1>Welcome to E-Guidance!</h1>
 <p>Enter Your Name:</p>
@@ -5,3 +7,4 @@
   <br><br>
   <input type="submit">
 </body>
+</html>
