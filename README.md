@@ -3,7 +3,7 @@
 <head>
 <style>
 #grad1 {
-	height: 100%;
+	height: 200px;
 	background-color: maroon;
 	background-image: linear-gradient(maroon, gold);
 }
