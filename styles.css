@@ -1,2 +1,4 @@
 body 
 { text-align:center; height: 100%; background-image: linear-gradient(maroon, gold); background-repeat:no-repeat; background-size:100% 100vh;}
+.vl
+{border-left: 1px solid white; height: 500px;}
