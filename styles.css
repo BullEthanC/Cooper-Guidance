@@ -1,2 +1,4 @@
 body 
 { height: 100%; background-image: linear-gradient(maroon, gold); background-repeat:no-repeat; background-size:100% 100vh;}
+header
+{display:none;}
