@@ -1,5 +1,3 @@
-html {cursor: url(hotdog.png), pointer;}
-
 body 
 { text-align:center; height: 100%; background-image: linear-gradient(maroon, gold); background-repeat:no-repeat; background-size:100% 100vh;overflow:hidden;width:100%;}
 
