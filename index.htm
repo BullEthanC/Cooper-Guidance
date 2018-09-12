@@ -10,23 +10,31 @@
       <th>
         <h1>Welcome to E-Guidance!</h1>
           <form action="/action_page.php">
-          First name:<br>
-          <input type="text" name="firstname" value="" autocomplete="off">
-          <br>
-          Last name:<br>
-          <input type="text" name="lastname" value="" autocomplete="off">
-          <br><br>
-            <select name="Reason">
-            <option value="academic">Academic</option>
-            <option value="college">College</option>
-            <option value="scheduling">Scheduling</option>
+            <input type="text" name="firstname" placeholder="First name">
+            <br><br>
+            <input type="text" name="lastname" placeholder="Last name">
+            <br><br>
+            Grade:<br>
+            <select name="Grade">
+              <option value="9th">Freshman</option>
+              <option value="10th">Sophmore</option>
+              <option value="11th">Junior</option>
+              <option value="12th">Senior</option>
+
             </select>
+	          <br><br>
+              Reason:<br>
+              <select name="Reason">
+                <option value="academic">Academic</option>
+                <option value="college">College</option>
+                <option value="scheduling">Scheduling</option>
+             </select>
             <br><br>
               If There Is Another Reason, Please List it Below:<br>
-              <input type="text" name="otherReason" value="" autocomplete="off">
+              <input type="text" name="otherReason" value="">
           </form>
         <br><br>
-        <input type="submit">
+         <input type="image" src="Submit.png" alt="Submit" height="81">
       </th>
       <th><div class="v2"></div></th>
     </tr>
