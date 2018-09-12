@@ -69,6 +69,30 @@ input[type="text"]
     outline: 0;
 }
 
+select
+{
+    background: none;
+    border: 0;
+    border-bottom: 1px solid black;
+    outline: 0;
+}
+
+::placeholder 
+{
+    color: black;
+    opacity: 1;
+}
+
+:-ms-input-placeholder 
+{
+    color: black;
+}
+
+::-ms-input-placeholder 
+{ 
+    color: black;
+}
+
 @keyframes moveBox
 {
 	0% {left:0;top:-20%;}
