@@ -4,15 +4,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <img class="img1" src="Cooper_Band.jpg">
+  <img class="img2" src="Cooper_Football.jpg">
+  <img class="img3" src="Cooper_Freshmen.jpg">
+  <img class="img4" src="Cooper_Catch.jpg">
   <table style="width:100%; vertical-align:top;">
     <tr>
       <th><div class="vl"></div></th>
       <th>
         <h1>Welcome to E-Guidance!</h1>
           <form action="/action_page.php">
-            <input type="text" name="firstname" placeholder="First name">
+            <input type="text" name="firstname" placeholder="First name" autocomplete="off">
             <br><br>
-            <input type="text" name="lastname" placeholder="Last name">
+            <input type="text" name="lastname" placeholder="Last name" autocomplete="off">
             <br><br>
             Grade:<br>
             <select name="Grade">
@@ -20,7 +24,6 @@
               <option value="10th">Sophmore</option>
               <option value="11th">Junior</option>
               <option value="12th">Senior</option>
-
             </select>
 	          <br><br>
               Reason:<br>
@@ -31,7 +34,7 @@
              </select>
             <br><br>
               If There Is Another Reason, Please List it Below:<br>
-              <input type="text" name="otherReason" value="">
+              <input type="text" name="otherReason" value="" autocomplete="off">
           </form>
         <br><br>
          <input type="image" src="Submit.png" alt="Submit" height="81">
