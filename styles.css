@@ -11,7 +11,7 @@ body
 }
 .img2
 {position: absolute;
-    top: -20%;
+    top: -30%;
     width: 20%;
     animation-name: moveBox;
     animation-delay: 1.5s;
