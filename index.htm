@@ -2,8 +2,11 @@
 <html>
 <head>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
+  
+  <script src="jquery.js"></script>
   <img class="img1" src="Cooper_Band.jpg">
   <img class="img2" src="Cooper_Football.jpg">
   <img class="img3" src="Cooper_Freshmen.jpg">
@@ -14,12 +17,13 @@
       <th>
         <h1>Welcome to E-Guidance!</h1>
           <form action="/action_page.php">
-            <input type="text" name="firstname" placeholder="First name" autocomplete="off">
+            <input type="text" name="firstname" placeholder="First name" autocomplete="off" required>
             <br><br>
-            <input type="text" name="lastname" placeholder="Last name" autocomplete="off">
+            <input type="text" name="lastname" placeholder="Last name" autocomplete="off" required>
             <br><br>
             Grade:<br>
-            <select name="Grade">
+            <select name="Grade" required>
+	      <option value="" selected="selected"></option>
               <option value="9th">Freshman</option>
               <option value="10th">Sophmore</option>
               <option value="11th">Junior</option>
@@ -27,20 +31,33 @@
             </select>
 	          <br><br>
               Reason:<br>
-              <select name="Reason">
+	      
+              <select class="medium" id="elementreg" name="reason" required>
+                <option value="" selected="selected"></option>
                 <option value="academic">Academic</option>
                 <option value="college">College</option>
                 <option value="scheduling">Scheduling</option>
+                <option value="other">Other</option>
              </select>
-            <br><br>
-              If There Is Another Reason, Please List it Below:<br>
-              <input type="text" name="otherReason" value="" autocomplete="off">
-          </form>
-        <br><br>
-         <button type="submit" form="form" value="submit">Submit</button>
+
+             <div class="types" id="other">
+	      <br>
+              <input type="text" name="otherReason" placeholder="Reason" autocomplete="off">
+	     </div>
+           <br><br>
+          <button>Submit</button>
+        </form>
       </th>
       <th><div class="v2"></div></th>
     </tr>
   </table>
+
+<script>
+$("#elementreg").on("change", function() {
+  var val = $(this).val();
+  $(".types").hide().find('input:text').val(''); // hide and empty
+  if (val) $("#" + val).show();
+});
+</script>
 </body>
 </html>
