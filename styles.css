@@ -68,7 +68,7 @@ button:hover
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-v1.mobile-only
+.v1
 {position: absolute;
     top: 0;
     bottom: 0;
