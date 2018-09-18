@@ -135,13 +135,4 @@ option
 	99.9% {left:-30%;top:-20%;}
 	100% {left:0; top:-20%;}
 }
-@media all and (max-width: 800px) {
-  .element {
-    border-right: none;
-  }
-}
-@media only screen and (max-width:500px){
-  .element {
-    border-right: none;
-  }
-}
+ @media screen and (min-width: 992px){ #wrapper #box1 #box2 .box3 img{display:none;} }
