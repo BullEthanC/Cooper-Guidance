@@ -135,4 +135,4 @@ option
 	99.9% {left:-30%;top:-20%;}
 	100% {left:0; top:-20%;}
 }
- @media screen and (min-width: 992px){ #wrapper #box1 #box2 .box3 img{display:none;} }
+ @media screen and (min-width: 992px){ #wrapper #box1 #box2 .box3 img1{display:none;} }
