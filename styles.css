@@ -135,18 +135,13 @@ option
 	99.9% {left:-30%;top:-20%;}
 	100% {left:0; top:-20%;}
 }
-@media only screen and (max-width:800px)
-{
-  /* For tablets: */
-  .main 
-{
-    {
-        display: none;
-    }
+@media all and (max-width: 800px) {
+  .element {
+    border-right: none;
+  }
 }
-@media only screen and (max-width:500px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    display: none;
+@media only screen and (max-width:500px){
+  .element {
+    border-right: none;
   }
 }
