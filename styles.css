@@ -76,7 +76,7 @@ button:hover
     right: 60%;
     width: 0%;
     height: 30%;
-    margin: auto;border-left: 5px solid white; height: 100%;}
+    margin: auto;border-left: 5px solid white; height: 100%; display:none;}
 .v2
 {position: absolute;
     top: 0;
