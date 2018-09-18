@@ -68,7 +68,7 @@ button:hover
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.vl
+v1.mobile-only
 {position: absolute;
     top: 0;
     bottom: 0;
@@ -134,4 +134,20 @@ option
 	99.8% {left:-30%;top:100%;}
 	99.9% {left:-30%;top:-20%;}
 	100% {left:0; top:-20%;}
+}
+@media (min-width:992px) {
+    .desktop-only {
+        display:block !important;
+    }
+}
+ 
+//small screen sizes
+@media (max-width: 991px) {
+    .mobile-only {
+        display:block !important;
+    }
+ 
+    .desktop-only {
+        display:none !important;
+    }
 }
