@@ -140,12 +140,9 @@ option
   /* For tablets: */
   .main 
 {
-    width: 80%;
-    padding: 0;
-  }
-  .right {
-    width: 100%;
-  }
+    {
+        display: none;
+    }
 }
 @media only screen and (max-width:500px) {
   /* For mobile phones: */
