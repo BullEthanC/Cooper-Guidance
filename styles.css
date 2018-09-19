@@ -68,7 +68,7 @@ button:hover
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.vl
+.v1
 {position: absolute;
     top: 0;
     bottom: 0;
@@ -135,9 +135,10 @@ option
 	99.9% {left:-30%;top:-20%;}
 	100% {left:0; top:-20%;}
 }
+
 @media screen and (max-width:800px)
 {
-  .img1, .img2, .img3, .img4, .v1, .v2{
-    display:none; /* The width is 100%, when the viewport is 800px or smaller */
-  }
+	.img1, .img2, .img3, .img4, .v1, .v2{
+	display:none;
+	}
 }
