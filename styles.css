@@ -1,5 +1,5 @@
 body 
-{ text-align:center; height: 100%; background-image: linear-gradient(maroon, gold); background-repeat:no-repeat; background-size:100% 100vh;overflow:hidden;width:100%;}
+{ text-align:center; height: 100%; background-image: linear-gradient(gold, maroon); background-repeat:no-repeat; background-size:100% 100vh;overflow:hidden;width:100%;}
 
 .img1
 {position: absolute;
