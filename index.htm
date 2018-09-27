@@ -8,22 +8,32 @@
 <body>
   
   <script src="jquery.js"></script>
-  <img class="img1" src="Cooper_Band.jpg">
-  <img class="img2" src="Cooper_Football.jpg">
-  <img class="img3" src="Cooper_Freshmen.jpg">
-  <img class="img4" src="Cooper_Catch.jpg">
+  <img class="img" src="Cooper_Band.jpg">
+  <img class="img" src="Cooper_Football.jpg" style="animation-delay: 1.34s;">
+  <img class="img" src="Cooper_Freshmen.jpg" style="animation-delay: 2.04s;">
+  <img class="img" src="Cooper_Catch.jpg" style="animation-delay: 2.74s;">
+  <img class="img" src="IMG_1098.jpg" style="animation-delay: 4.62s;">
+  <img class="img" src="IMG_6033.jpg" style="animation-delay: 5.72s;">
+  <img class="img" src="IMG_6097.jpg" style="animation-delay: 6.82s;">
+  <img class="img" src="IMG_8434.jpg" style="animation-delay: 8.23s;">
+  <img class="img2" src="IMG_6056.jpg">
+  <img class="img2" src="IMG_6192.jpg" style="animation-delay: 2.913s;">
+  <img class="img2" src="IMG_8406.jpg" style="animation-delay: 4.23s;">
+  <img class="img2" src="IMG_8462.jpg" style="animation-delay: 5.55s;">
+  <img class="img2" src="IMG_8476.jpg" style="animation-delay: 6.95s;">
+  <img class="img2" src="IMG_6182.jpg" style="animation-delay: 8.41s; height: 250px;">
   <table style="width:100%; vertical-align:top;">
     <tr>
       <th><div class="v1"></div></th>
       <th>
         <h1>Welcome to E-Guidance!</h1>
-          <form action="/action_page.php">
-            <input type="text" name="firstname" placeholder="First name" autocomplete="off" required>
+          <form action="">
+            <input type="text" id="firstname" name="firstname" placeholder="First name" autocomplete="off" required>
             <br><br>
-            <input type="text" name="lastname" placeholder="Last name" autocomplete="off" required>
+            <input type="text" id="lastname" name="lastname" placeholder="Last name" autocomplete="off" required>
             <br><br>
             Grade:<br>
-            <select name="Grade" required>
+            <select id="grade" name="Grade" required>
 	      <option value="" selected="selected"></option>
               <option value="9th">Freshman</option>
               <option value="10th">Sophmore</option>
@@ -35,23 +45,61 @@
 	      
               <select class="medium" id="elementreg" name="reason" required>
                 <option value="" selected="selected"></option>
-                <option value="academic">Academic</option>
-                <option value="college">College</option>
-                <option value="scheduling">Scheduling</option>
-                <option value="other">Other</option>
+                <option value="Academic">Academic</option>
+                <option value="College">College</option>
+                <option value="Scheduling">Scheduling</option>
+                <option value="Other">Other</option>
              </select>
 
-             <div class="types" id="other">
+             <div class="types" id="Other">
 	      <br>
-              <input type="text" name="otherReason" placeholder="Reason" autocomplete="off">
+              <input type="text" id="reason" name="otherReason" value="null" placeholder="Reason" autocomplete="off">
 	     </div>
            <br><br>
-          <button>Submit</button>
+          <button type="submit" onclick="addStudent(document.getElementById('firstname').value, document.getElementById('lastname').value, document.getElementById('grade').value, document.getElementById('elementreg').value, document.getElementById('reason').value);">Submit</button>
         </form>
       </th>
       <th><div class="v2"></div></th>
     </tr>
   </table>
+
+<!--Initializes Firebase-->
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyB5J9tz76zMckrTpxOWCTghBJ-rSkX5R7I",
+    authDomain: "guidance-48a92.firebaseapp.com",
+    databaseURL: "https://guidance-48a92.firebaseio.com",
+    projectId: "guidance-48a92",
+    storageBucket: "guidance-48a92.appspot.com",
+    messagingSenderId: "741937370677"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!--Sends Information to Firebase-->
+<script>
+  var database = firebase.database();
+  function addStudent(firstname, lastname, grade, problem, reason) {
+    if (firstname!="" && lastname!="" && grade!="" && problem!="") {
+      if(problem==="Other" && reason!="") {
+        firebase.database().ref('users/' + lastname + ', ' + firstname).set({
+          Year: grade,
+          Issue: reason
+        });
+      }
+      else {
+        firebase.database().ref('users/' + lastname + ', ' + firstname).set({
+          Year: grade,
+          Issue: problem
+        });
+      }
+    }
+  }
+</script>
 
 <script>
 $("#elementreg").on("change", function() {
